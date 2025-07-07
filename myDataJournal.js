@@ -1,3 +1,5 @@
+// https://github.com/Justin-Logan/cs81-module4b-mydataexplorer
+
 let weekData = [
     {day : 'Sunday', sleepHours : 6, screenTime : 3, mood : 7, caffeineIntake : 8, focusLevel : 8},
     {day : 'Monday', sleepHours : 7, screenTime : 5, mood : 8, caffeineIntake : 5, focusLevel : 6},
