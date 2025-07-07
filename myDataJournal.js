@@ -34,9 +34,18 @@ function findHighestScreenTime(data) {
     console.log(`The day with the highest screen time is ${dayWithHighestScreenTime} with ${highestScreenTime} hours.`);
 }
 
-// function averageSleep() {
+function averageSleep(data) {
 
-// }
+    let totalSleep = 0;
+
+    for (let day of data) {
+        totalSleep += day.sleepHours;
+    }
+
+    let averageSleep = (totalSleep / 7).toFixed(1);
+    console.log(`The average of sleep throughout the week is ${averageSleep} hours.`);
+
+}
 
 // function mostFrequentMood() {
 
