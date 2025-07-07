@@ -47,10 +47,34 @@ function averageSleep(data) {
 
 }
 
-// function mostFrequentMood() {
+function mostFrequentMood(data) {
 
-// }
+    let moodCount = {};
+
+    for (let day of data) {
+        let mood = day.mood;
+        if (moodCount[mood] === undefined) {
+            moodCount[mood] = 1;
+        } else {
+            moodCount[mood] += 1;
+        }
+    }
+
+    let mostMood = 0;
+    let mostFrequentMood = 0;
+
+    for (let mood in moodCount) {
+        if (moodCount[mood] > mostMood) {
+            mostMood = moodCount[mood];
+            mostFrequentMood = mood;
+        }
+    }
+    console.log(`The most frequent mood level is ${mostFrequentMood}.`);
+
+}
 
 // function correlateCaffeineToFocus() {
 
 // }
+
+mostFrequentMood(weekData);
