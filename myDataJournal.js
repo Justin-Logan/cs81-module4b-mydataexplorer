@@ -1,11 +1,11 @@
 let weekData = [
-    {day : 'Sunday', sleepHours : 0, screenTime : 1, mood : 0, caffeineIntake : 0, focusLevel : 0},
-    {day : 'Monday', sleepHours : 0, screenTime : 0, mood : 0, caffeineIntake : 0, focusLevel : 0},
-    {day : 'Tuesday', sleepHours : 0, screenTime : 5, mood : 0, caffeineIntake : 0, focusLevel : 0},
-    {day : 'Wednesday', sleepHours : 0, screenTime : 0, mood : 0, caffeineIntake : 0, focusLevel : 0},
-    {day : 'Thursday', sleepHours : 0, screenTime : 4, mood : 0, caffeineIntake : 0, focusLevel : 0},
-    {day : 'Friday', sleepHours : 0, screenTime : 2, mood : 0, caffeineIntake : 0, focusLevel : 0},
-    {day : 'Saturday', sleepHours : 0, screenTime : 0, mood : 0, caffeineIntake : 0, focusLevel : 0},
+    {day : 'Sunday', sleepHours : 6, screenTime : 3, mood : 7, caffeineIntake : 8, focusLevel : 8},
+    {day : 'Monday', sleepHours : 7, screenTime : 5, mood : 8, caffeineIntake : 5, focusLevel : 6},
+    {day : 'Tuesday', sleepHours : 5, screenTime : 8, mood : 7, caffeineIntake : 0, focusLevel : 6},
+    {day : 'Wednesday', sleepHours : 4, screenTime : 3, mood : 4, caffeineIntake : 1, focusLevel : 4},
+    {day : 'Thursday', sleepHours : 6, screenTime : 7, mood : 7, caffeineIntake : 1, focusLevel : 7},
+    {day : 'Friday', sleepHours : 4, screenTime : 3, mood : 8, caffeineIntake : 0, focusLevel : 8},
+    {day : 'Saturday', sleepHours : 4, screenTime : 5, mood : 7, caffeineIntake : 2, focusLevel : 7},
 ]
 
 // Which day had the most screen time?
@@ -20,7 +20,7 @@ let weekData = [
 
 function findHighestScreenTime(data) {
 
-    let highestScreenTime = 0;
+    let highestScreenTime;
     let dayWithHighestScreenTime;
 
     for (let day of data) {
