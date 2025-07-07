@@ -44,7 +44,6 @@ function averageSleep(data) {
 
     let averageSleep = (totalSleep / 7).toFixed(1);
     console.log(`The average of sleep throughout the week is ${averageSleep} hours.`);
-
 }
 
 function mostFrequentMood(data) {
@@ -70,11 +69,28 @@ function mostFrequentMood(data) {
         }
     }
     console.log(`The most frequent mood level is ${mostFrequentMood}.`);
-
 }
 
-// function correlateCaffeineToFocus() {
+function correlateCaffeineToFocus(data) {
+    
+    let relation = 0;
 
-// }
+    for (let day of data) {
+        if (day.caffeineIntake > 0 && day.focusLevel > 5) {
+            relation++;
+        }
+    }
 
-mostFrequentMood(weekData);
+    relation = (relation / 7) * 100;
+    let result = false;
+
+    if (relation > 50) {
+        result = true;
+    }
+
+    if (result) {
+        console.log("There is a positive correlation between the amount of caffeine consumed and focus levels.")
+    } else {
+        console.log("There is no correlation between caffeine intake and focus levels. ")
+    }
+}
